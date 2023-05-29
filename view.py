@@ -21,7 +21,14 @@ def error_func():
     print(' Вы ввели не верные данные.')
 
 
+def add_new_cantacts(new_data):
+    return None
+
+
+def error_add_new_cantacts(new_data):
+    return None
+
+
 if __name__ == "__main__":
     hello()
     menu()
-    error_func()

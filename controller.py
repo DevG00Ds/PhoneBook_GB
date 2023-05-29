@@ -1,14 +1,11 @@
 import model, view
-import os
 
 
 def start():
     view.hello()
     while True:
         view.menu()
-        sw = input(' Сделайте выш выбор ')
-        os.system('cls')
-        print()
+        sw = input(' Сделайте выш выбор :  ')
         if sw == '1':
             data = model.all_cantacts()
             view.show_cantacts(data)
@@ -32,12 +29,15 @@ def start():
         elif sw == '3':
             cantacts = input('Введите данные абонента: ')
             new_data = model.new_cantacts(cantacts)
+            if new_data:
+                view.add_new_cantacts(new_data)
+            else:
+                view.error_add_new_cantacts(new_data)
         elif sw == '4':
             model.edits_data()
         elif sw == '5':
             model.delete_cantakts()
         elif sw == '0':
-            os.system('cls')
             print('Всего хорошего!')
             break
         else:

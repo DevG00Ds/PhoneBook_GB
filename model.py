@@ -1,4 +1,4 @@
-def all_cantacts(cantacts):
+def all_cantacts():
     return None
 
 
