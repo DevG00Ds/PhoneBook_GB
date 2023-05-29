@@ -23,7 +23,7 @@ def new_contacts(num, ls):
     if (not data_number):
         all_contacts()
     data_number[num] = ls
-    print(data_number)
+    print(num, f' ', data_number[num])
     overwritingData()
     return data_number[num]
 
