@@ -10,7 +10,7 @@ def search_name(data_number):
     return None
 
 
-def new_cantacts(cantacts):
+def new_cantacts(num,ls):
     return None
 
 

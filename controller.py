@@ -26,8 +26,12 @@ def start():
                 else:
                     print(" Неккоректный ввод")
         elif sw == '3':
-            cantacts = input('Введите данные абонента через пробел: ')
-            new_data = model.new_cantacts(cantacts)
+            ls = []
+            num = int(input('Введите номер: '))
+            ls.append(input('Введите фамилию: '))
+            ls.append(input('Введите имя: '))
+            ls.append(input('Введите отчество: '))
+            new_data = model.new_cantacts(num, ls)
             if new_data:
                 view.add_new_cantacts(new_data)
             else:
