@@ -15,7 +15,7 @@ def menu():
 
 def show_contacts(data):
     for num in data.keys():
-        print(f'№ {num}. Владелец -', *data[num])
+        print(f'№ {num}. Владелец -', data[num])
 
 
 def error_func():
