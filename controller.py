@@ -7,10 +7,10 @@ def start():
         view.menu()
         sw = input(' Сделайте выш выбор :  ')
         if sw == '1':
-            data = model.all_cantacts()
+            data = model.all_contacts()
             view.show_cantacts(data)
         elif sw == '2':
-            data_number = model.all_cantacts()
+            data_number = model.all_contacts()
             while True:
                 print(' \nНайти абонента по номеру - Введите "1"'
                       '\nНайти абонента по Ф.И.О - Введите "2"'
@@ -31,15 +31,22 @@ def start():
             ls.append(input('Введите фамилию: '))
             ls.append(input('Введите имя: '))
             ls.append(input('Введите отчество: '))
-            new_data = model.new_cantacts(num, ls)
+            new_data = model.new_contacts(num, ls)
             if new_data:
                 view.add_new_cantacts(new_data)
             else:
                 view.error_add_new_cantacts(new_data)
         elif sw == '4':
-            model.edits_data()
+            numdell = input('Введите номер контакта для редактирования: ')
+            ls = []
+            num = int(input('Введите новый номер: '))
+            ls.append(input('Введите фамилию: '))
+            ls.append(input('Введите имя: '))
+            ls.append(input('Введите отчество: '))
+            model.edits_data(num, ls, numdell)
         elif sw == '5':
-            model.delete_cantakts()
+            num = input('Введите номер контакта для удаления: ')
+            model.delete_contakts(num)
         elif sw == '0':
             print('Всего хорошего!')
             break
