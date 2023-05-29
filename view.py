@@ -32,3 +32,4 @@ def error_add_new_cantacts(new_data):
 if __name__ == "__main__":
     hello()
     menu()
+    error_func()

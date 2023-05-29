@@ -41,3 +41,4 @@ def start():
             break
         else:
             view.error_func()
+            break
