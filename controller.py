@@ -10,8 +10,7 @@ def start():
             data = model.all_cantacts()
             view.show_cantacts(data)
         elif sw == '2':
-            cantacts = input('Введите абонента: ')
-            data_number = model.all_cantacts(cantacts)
+            data_number = model.all_cantacts()
             while True:
                 print(' \nНайти абонента по номеру - Введите "1"'
                       '\nНайти абонента по Ф.И.О - Введите "2"'
@@ -27,7 +26,7 @@ def start():
                 else:
                     print(" Неккоректный ввод")
         elif sw == '3':
-            cantacts = input('Введите данные абонента: ')
+            cantacts = input('Введите данные абонента через пробел: ')
             new_data = model.new_cantacts(cantacts)
             if new_data:
                 view.add_new_cantacts(new_data)
