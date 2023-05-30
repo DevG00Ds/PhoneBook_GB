@@ -19,12 +19,16 @@ def search_number(data_number):
 
 def search_name(data_number):
     fam = input('Введите фамилию для поииска: ')
+    kl = 0
     for num in data_number:
         if fam in data_number[num]:
             print(data_number[num], f'имеет номер {num}')
-            break
-    else:
-        print('Такой фамилии нет')        
+            kl = 1
+    if kl == 0:
+        print('Такой фамилии нет')
+#            break
+#    else:
+#        print('Такой фамилии нет')        
 #    print(f'\n№ {num}. Владелец - {data_number[num]}')
 #    return None
 
