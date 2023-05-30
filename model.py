@@ -14,6 +14,8 @@ def all_contacts():
 def search_number(data_number):
     num = input('Введите номер абонента для поиска: ')
     print(f'\n№ {num}. Владелец - {data_number[num]}')
+
+
 #    return None
 
 
@@ -26,7 +28,6 @@ def search_name(data_number):
             kl = 1
     if kl == 0:
         print('Такой фамилии нет')
-
 
 
 def new_contacts(num, ls):
@@ -62,4 +63,4 @@ def delete_contakts(num):  # num = input('Введите номер контак
 
 global data_number
 data_number = {}
-path_file = r'D:\GB\2023.04.05-Python\PhoneBook\PhoneBook_GB\TelephoneBook.txt'
+path_file = open('TelephoneBook.txt', 'w')
