@@ -12,6 +12,8 @@ def all_contacts():
 
 
 def search_number(data_number):
+    if ( not data_number):
+        all_contacts()
     num = input('Введите номер абонента для поиска: ')
     print(f'\n№ {num}. Владелец - {data_number[num]}')
 
@@ -20,7 +22,9 @@ def search_number(data_number):
 
 
 def search_name(data_number):
-    fam = input('Введите фамилию для поииска: ')
+    if ( not data_number):
+        all_contacts()
+    fam = input('Введите фамилию для поиска: ')
     kl = 0
     for num in data_number:
         if fam in data_number[num]:
@@ -63,4 +67,4 @@ def delete_contakts(num):  # num = input('Введите номер контак
 
 global data_number
 data_number = {}
-path_file = open('TelephoneBook.txt', 'w')
+path_file = r'TelephoneBook.txt'

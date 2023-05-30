@@ -7,8 +7,7 @@ def start():
         view.menu()
         sw = input(' Сделайте выш выбор :  ')
         if sw == '1':
-            data = model.all_contacts()
-            view.show_contacts(data)
+            view.show_contacts(model.all_contacts())
         elif sw == '2':
             data_number = model.all_contacts()
             while True:
@@ -27,7 +26,7 @@ def start():
                     print(" Неккоректный ввод")
         elif sw == '3':
             ls = []
-            num = int(input('Введите номер: '))
+            num = int(input('Введите номер телефона: '))
             ls.append(input('Введите фамилию: '))
             ls.append(input('Введите имя: '))
             ls.append(input('Введите отчество: '))
