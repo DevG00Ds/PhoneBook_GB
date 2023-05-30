@@ -26,11 +26,7 @@ def search_name(data_number):
             kl = 1
     if kl == 0:
         print('Такой фамилии нет')
-#            break
-#    else:
-#        print('Такой фамилии нет')        
-#    print(f'\n№ {num}. Владелец - {data_number[num]}')
-#    return None
+
 
 
 def new_contacts(num, ls):
