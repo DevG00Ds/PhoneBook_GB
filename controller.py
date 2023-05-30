@@ -37,9 +37,16 @@ def start():
             else:
                 view.error_add_new_contacts(new_data)
         elif sw == '4':
-            model.edits_data()
+            numdell = input('Введите номер контакта для редактирования: ')
+            ls = []
+            num = int(input('Введите новый номер: '))
+            ls.append(input('Введите фамилию: '))
+            ls.append(input('Введите имя: '))
+            ls.append(input('Введите отчество: '))
+            model.edits_data(num, ls, numdell)
         elif sw == '5':
-            model.delete_contakts()
+            num = input('Введите номер контакта для удаления: ')
+            model.delete_contakts(num)
         elif sw == '0':
             print('Всего хорошего!')
             break
