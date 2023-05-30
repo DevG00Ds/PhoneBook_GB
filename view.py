@@ -13,20 +13,22 @@ def menu():
           )
 
 
-def show_cantacts(data):
-    return None
+def show_contacts(data):
+    for num in data.keys():
+        print(f'№ {num}. Владелец -', data[num])
 
 
 def error_func():
     print(' Вы ввели не верные данные.')
 
 
-def add_new_cantacts(new_data):
-    return None
+def add_new_contacts(new_data):
+    print('Новый контакт добавлен')
+    print(new_data)
 
 
-def error_add_new_cantacts(new_data):
-    return None
+def error_add_new_contacts(new_data):
+    print('Новый контакт не добавлен')
 
 
 if __name__ == "__main__":

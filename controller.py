@@ -8,7 +8,7 @@ def start():
         sw = input(' Сделайте выш выбор :  ')
         if sw == '1':
             data = model.all_contacts()
-            view.show_cantacts(data)
+            view.show_contacts(data)
         elif sw == '2':
             data_number = model.all_contacts()
             while True:
@@ -33,9 +33,9 @@ def start():
             ls.append(input('Введите отчество: '))
             new_data = model.new_contacts(num, ls)
             if new_data:
-                view.add_new_cantacts(new_data)
+                view.add_new_contacts(new_data)
             else:
-                view.error_add_new_cantacts(new_data)
+                view.error_add_new_contacts(new_data)
         elif sw == '4':
             numdell = input('Введите номер контакта для редактирования: ')
             ls = []
